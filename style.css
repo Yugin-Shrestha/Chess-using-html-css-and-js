@@ -159,7 +159,7 @@ button:hover {
     background-color: #34476e;
 }
 
-.controls{
+.controls {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 9px;
