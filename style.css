@@ -42,6 +42,10 @@ header a{
     justify-content: space-between;
 }
 
+.links a:hover {
+    color: #fff;
+}
+
 .page {
     width: min(1200px, 96%);
     margin: 25px auto;
@@ -104,6 +108,21 @@ header a{
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
     grid-template-rows: repeat(8, minmax(0, 1fr));
+    overflow: hidden;
+    border: 5px solid #34445F;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px #0005;
+}
+
+.square {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
 }
 
 .light {
@@ -128,7 +147,7 @@ header a{
     margin-bottom: 10px;
 }
 
-.panel p{
+.panel-note{
     margin-top: 10px;
     font-size: 13px;
     color: #94a3b8;

@@ -48,16 +48,18 @@
 
             <section class="panel">
                 <h2>Captured Pieces</h2>
-                <p>Captured by White</p>
-                <div id="capturedByWhite"></div>
-
-                <p>Captured by Black</p>
-                <div id="capturedByBlack"></div>
-            </section>
-
-            <section class="panel">
-                <h2>Move History</h2>
-                <div id="history">No moves yet</div>
+                <div class="captured-group">
+                    <div class="captured-label">Captured by White</div>
+                    <div id="capturedByWhite" class="captured-pieces">
+                        <span class="empty">No pieces captured</span>
+                    </div>
+                </div>
+                <div class="captured-group">
+                    <div class="captured-label">Captured by Black</div>
+                    <div id="capturedByBlack" class="captured-pieces">
+                        <span class="empty">No pieces captured</span>
+                    </div>
+                </div>
             </section>
 
             <section class="panel">
