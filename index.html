@@ -1,16 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171923">
-  <title>Chess — 2 Players</title>
-  <link rel="stylesheet" href="style.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess By Yugin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <a href="/" class="logo"> CHESS.</a>
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="https://github.com/Yugin-Shrestha" target="_blank" rel="noopener noreferrer">Github ↗</a>
+        </div>
+    </header>
 
+    <main class="page">
+        <section class="board-area">
+                <div class="player">
+                    <div class="avatar">♚</div>
+                    <div>
+                        <div class="player-name">Black</div>
+                        <div class="player-label">Player 2</div>
+                    </div>
+                </div>
 
+                <div class="board" id="board"></div>
+                
+                <div class="player bottom-player">
+                    <div class="avatar">♔</div>
+                    <div>
+                        <div class="player-name">White</div>
+                        <div class="player-label">Player 1</div>
+                    </div>
+                </div>
+        </section>
+
+        <aside class="sidebar">
+            <section class="panel">
+                <h2>Game Status</h2>
+                <div id="status" class="status">
+                    <strong>White to move</strong><br>
+                    Select a piece to begin.
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Captured Pieces</h2>
+                <p>Captured by White</p>
+                <div id="capturedByWhite"></div>
+
+                <p>Captured by Black</p>
+                <div id="capturedByBlack"></div>
+            </section>
+
+            <section class="panel">
+                <h2>Move History</h2>
+                <div id="history">No moves yet</div>
+            </section>
+
+            <section class="panel controls">
+                <button id="newGame">New Game</button>
+                <button id="undo">Undo</button>
+                <button id="flipBoard">Flip Board</button>
+                <p class="panel-note">
+                    Select a piece, then select its destination.
+                    Use Undo to take back the last move.
+                </p>
+            </section>
+        </aside>
+    </main>
 
     <script src="script.js"></script>
 </body>

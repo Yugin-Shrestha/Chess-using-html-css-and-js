@@ -1,13 +1,13 @@
-const chessboard = document.getElementById('chessboard');
-for (let row = 0; row < 8; row++) {
-    for (let  col = 0; col < 8; col++) {
+const board = document.getElementById('board');
+for (let i = 0; i < 8; i++) {
+    for (let j = 0; j < 8; j++) {
         const square = document.createElement('div');
         square.classList.add('square');
-        if ((row + col) % 2 === 0) {
-            square.classList.add('white');
+        if ((i + j) % 2 === 0) {
+            square.classList.add('light');
         } else {
-            square.classList.add('black');
+            square.classList.add('dark');
         }
+        board.appendChild(square);
     }
 }
-chessboard.appendChild(square);
