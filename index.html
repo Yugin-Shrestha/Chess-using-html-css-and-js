@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess By Yugin</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,14 +17,14 @@
 
     <main class="page">
         <section class="board-area">
-                <div class="player">
-                    <div class="avatar">♚</div>
-                    <div>
-                        <div class="player-name">Black</div>
-                        <div class="player-label">Player 2</div>
-                    </div>
+            <div class="player">
+                <div class="avatar">♚</div>
+                <div>
+                    <div class="player-name">Black</div>
+                    <div class="player-label">Player 2</div>
                 </div>
-
+                </div>
+                
                 <div class="board" id="board"></div>
                 
                 <div class="player bottom-player">
@@ -36,30 +35,37 @@
                     </div>
                 </div>
                 <br>
-                <div class="panel">
+            </section>
+            
+            <aside class="sidebar">
+                
+                <section class="panel">
                     <h2>Game Status</h2>
                     <div id="status" class="status">
                         <strong>White to move</strong><br>
                         Select a piece to begin.
                     </div>
+                </section>
+                <section class="panel">
+                    <h2>Captured Pieces</h2>
+                    <div class="captured-group">
+                        <div class="captured-label">Captured by White</div>
+                        <div id="capturedByWhite" class="captured-piece">
+                            <span class="empty">No pieces captured</span>
+                        </div>
+                    </div>
+                    <div class="captured-group">
+                        <div class="captured-label">Captured by Black</div>
+                        <div id="capturedByBlack" class="captured-piece">
+                            <span class="empty">No pieces captured</span>
+                    </div>
                 </div>
-        </section>
-
-        <aside class="sidebar">
+            </section>
 
             <section class="panel">
-                <h2>Captured Pieces</h2>
-                <div class="captured-group">
-                    <div class="captured-label">Captured by White</div>
-                    <div id="capturedByWhite" class="captured-pieces">
-                        <span class="empty">No pieces captured</span>
-                    </div>
-                </div>
-                <div class="captured-group">
-                    <div class="captured-label">Captured by Black</div>
-                    <div id="capturedByBlack" class="captured-pieces">
-                        <span class="empty">No pieces captured</span>
-                    </div>
+                <h2>Move history</h2>
+                <div class="history" id="history">
+                    <div class="empty">No moves yet</div>
                 </div>
             </section>
 
@@ -77,6 +83,16 @@
         </aside>
     </main>
 
+        <div class="promotion-overlay" id="promotionOverlay">
+        <div class="promotion-dialog">
+            <h2 id="promotionTitle">Promote your pawn</h2>
+            <p>Choose a piece.</p>
+            <div class="promotion-options" id="promotionOptions"></div>
+            <button id="cancelPromotion" type="button">Cancel</button>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
