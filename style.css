@@ -162,11 +162,16 @@ header a{
     line-height: 1.6;
 }
 
+.empty {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
 button {
     min-height: 43px;
     padding: 9px 8px;
     color: #f8fafc;
-    background: #253457;
+    background: #283289;
     border: 1px solid #3a4b70;
     border-radius: 7px;
     font-size: 13px;
@@ -175,15 +180,11 @@ button {
 }
 
 button:hover {
-    background-color: #34476e;
+    filter: brightness(1.3);
 }
 
 .controls {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 9px;
-}
-
-#newGame {
-    background: #1e293b;
 }
